@@ -35,7 +35,7 @@
                 <a class="nav-link active" aria-current="page" href="Principal">Principal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Registro</a>
+                <a class="nav-link" href="Registro">Registro</a>
               </li>
           </div>
         </div>
