@@ -3,23 +3,22 @@
 
 @section('contenido')
 
- <h1>Principal</h1>
- <div class="container">
-    <div class="card text-center">
+
+ <div class="container mt-2 col-md-7">
+
+    <div class="card text-center mb-2" style="width: 34rem; margin-left: 6rem;">
         <div class="card-header">
-          Featured
+            Noticia
         </div>
+
+        <img src="\Imagenes\dia.jpg" class="card-img-top" alt="...">
+
         <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
+            <p class="card-text">El Día de las Bibliotecas se celebra cada 24 de octubre desde el año 1997. Este día nació como iniciativa de la Asociación Española de Amigos del Libro Infantil y Juvenil con el objetivo de concienciar a la sociedad de la importancia de la lectura y como homenaje y reconocimiento a la labor de los bibliotecarios/as.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
-        <div class="card-footer text-muted">
-          2 days ago
-        </div>
-      </div>
 
-
+    </div>
 
 
  </div>

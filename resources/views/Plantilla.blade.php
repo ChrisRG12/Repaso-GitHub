@@ -11,7 +11,7 @@
 </head>
 
 
-<body>
+<body class=" text-center ">
     <!-- Agregamos un style para el fondo de las vistas -->
     <style>
         body{
@@ -50,7 +50,7 @@
 
  <!-- Pie de Pagina -->
 
-<div class="alert alert-secondary" role="alert">
+<div class="alert alert-dark" role="alert">
   Libreria ©  
  
 </div>
