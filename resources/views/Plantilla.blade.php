@@ -12,6 +12,15 @@
 
 
 <body>
+    <!-- Agregamos un style para el fondo de las vistas -->
+    <style>
+        body{
+            background: #626a7a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgb(15, 62, 136), #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0f3e8b, #40444d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        }
+    </style>
 
 
 
