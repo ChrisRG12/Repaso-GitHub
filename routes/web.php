@@ -27,3 +27,5 @@ Route::get('Registro', function () {
     return view('Registro');
 });
 
+Route::view('Plantilla', 'Plantilla');
+
