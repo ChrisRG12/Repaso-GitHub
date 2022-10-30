@@ -42,6 +42,16 @@
       </nav>
 
 
+    <!-- Contenido -->
+
+@yield('contenido') 
+
+ <!-- Pie de Pagina -->
+
+<div class="alert alert-secondary" role="alert">
+  Libreria ©  $d = new DateTime("now")
+</div>
+
 
     
 
