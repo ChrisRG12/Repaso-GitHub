@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class controladorLibro extends Controller
 {
     public function showWelcome(){
-        return view('/');
+        return view('welcome');
     }
 
     public function showPrincipal(){
@@ -16,5 +16,9 @@ class controladorLibro extends Controller
 
     public function showRegsitro(){
         return view('Registro');
+    }
+
+    public function Procesar_Libro(request $req){
+        return "Libro Procesando";
     }
 }
