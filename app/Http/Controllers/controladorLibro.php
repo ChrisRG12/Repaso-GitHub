@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class controladorLibro extends Controller
+{
+    public function showWelcome(){
+        return view('/');
+    }
+
+    public function showPrincipal(){
+        return view('Principal');
+    }
+
+    public function showRegsitro(){
+        return view('Registro');
+    }
+}
