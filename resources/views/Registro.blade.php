@@ -7,7 +7,8 @@
 
     <div class="card text-center mb-5">
 
-        <form action="#">
+        <form action="LibroGuardado" method="post">
+            @csrf
 
 
         <div class="card-header fw-bolder">
