@@ -24,7 +24,7 @@ class validar_Libro extends FormRequest
     public function rules()
     {
         return [
-            'NumISNB' => 'required|min:13',
+            'ISNB' => 'required|min:13',
             'txtTitulo' => 'required',
             'txtAutor' => 'required',
             'NumPaginas' => 'required',
