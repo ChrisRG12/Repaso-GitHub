@@ -1,5 +1,13 @@
 @extends('plantilla')
 
+@if(session()->has('confirmacion')) 
+{!! " <script> Swal.fire(
+ 'Good job!',
+ 'You clicked the button!',
+ 'success'  ) </script> "!!}
+
+@endif
+
 
 @section('contenido')
 
@@ -7,6 +15,10 @@
     @if ($errors->any())
      
      @foreach ($errors->all() as $error)
+     <div class="alert alert-primary alert-dismissible fade show" role="alert">
+        <strong> {{ $error }} </strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
          
      @endforeach
         
@@ -25,11 +37,10 @@
         <div class="card-body ">
 
             <div class="mb-1">
-            <label class="form-label"> ISNB</label>
-            <input type="Number" class="form-control" name="ISNB" value="{{ old(ISNB)}}">
-            <p class="text-secondary fst-Italic"> {{ $errors->first(ISNB)}}</p>
-            </div>
-
+                <label class="form-label"> ISNB </label>
+                <input type="Number" class="form-control" name="ISNB" value="{{ old(ISNB)}}">
+                <p class="text-secondary fst-Italic"> {{ $errors->first(ISNB)}}</p>
+                </div>
 
             <div class="mb-1">
              <label class="form-label"> Titulo</label>

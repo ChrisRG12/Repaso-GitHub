@@ -21,6 +21,6 @@ class controladorLibro extends Controller
     }
 
     public function Procesar_Libro(validar_Libro $req){
-        return redirect('Registro')->with('confirmacion' , ' Su Recuerdo se ha guardado correctamente');;
+        return redirect('Registro')->with('confirmacion' , ' Su Libro se ha guardado correctamente');
     }
 }
