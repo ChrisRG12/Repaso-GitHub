@@ -2,6 +2,40 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\controladorLibro;
+
+
+Route::get('/', [controladorLibro::class, 'showWelcome'])->name('/');
+Route::get('Principal', [controladorLibro::class, 'showPrincipal'])->name('Prin');
+Route::get('Registro', [controladorLibro::class, 'showRegsitro'])->name('Reg');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,7 +45,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,4 +62,5 @@ Route::get('Registro', function () {
 });
 
 Route::view('Plantilla', 'Plantilla');
+*/
 
