@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\validar_Libro;
+
 use Illuminate\Http\Request;
 
 class controladorLibro extends Controller
