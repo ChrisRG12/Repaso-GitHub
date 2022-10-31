@@ -12,6 +12,10 @@ Route::get('Principal', [controladorLibro::class, 'showPrincipal'])->name('Prin'
 Route::get('Registro', [controladorLibro::class, 'showRegsitro'])->name('Reg');
 
 
+Route::post('LibroGuardado', [controladorLibro::class, 'Procesar_Libro'])->name('Guard');
+
+
+
 
 
 
