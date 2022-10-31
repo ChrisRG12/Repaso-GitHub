@@ -20,7 +20,7 @@ class controladorLibro extends Controller
         return view('Registro');
     }
 
-    public function Procesar_Libro(request $req){
-        return "Libro Procesando";
+    public function Procesar_Libro(validar_Libro $req){
+        return redirect('Registro')->with('confirmacion' , ' Su Recuerdo se ha guardado correctamente');;
     }
 }
