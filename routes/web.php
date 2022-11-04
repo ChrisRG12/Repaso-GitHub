@@ -5,9 +5,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorLibro;
 
 
-Route::get('/', [controladorLibro::class, 'showWelcome']);
+Route::get('welcome', [controladorLibro::class, 'showWelcome']);
 
-Route::get('Principal', [controladorLibro::class, 'showPrincipal'])->name('Prin');
+Route::get('/', [controladorLibro::class, 'showPrincipal'])->name('Prin');
 
 Route::get('Registro', [controladorLibro::class, 'showRegsitro'])->name('Reg');
 

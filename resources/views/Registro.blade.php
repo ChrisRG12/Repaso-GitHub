@@ -2,12 +2,19 @@
 
 @section('contenido')
 
-@if(session()->has('confirmacion')) 
-{!! " <script> Swal.fire(
- 'Muy Bien Very Good!',
- 'Libro Registrado ',
- 'success'  
- ) </script> "!!}
+@if(session()->has('confirmacion'))
+
+<?php
+$titulo = session()->get('Vari');
+?>
+
+{!! 
+" <script> 
+      Swal.fire(
+      'Muy Bien Very Good!',
+      'Libro: {$titulo} Registrado Correctamente',
+      'success'  
+) </script> "!!}
 
 @endif
 

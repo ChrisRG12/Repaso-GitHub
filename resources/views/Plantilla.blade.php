@@ -34,10 +34,10 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="Principal">Principal</a>
+                <a class="nav-link active" aria-current="page" href="/" >Principal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Registro">Registro</a>
+                <a class="nav-link" href="Registro" >Registro</a>
               </li>
           </div>
         </div>
@@ -53,11 +53,11 @@
  <!-- Pie de Pagina -->
 
 <div class="alert alert-dark" role="alert">
-  Libreria 2002 CopyRight© 
+  Libreria 2022 CopyRight© 
   <?php
 
   date_default_timezone_set('America/Mexico_City');
-  $fecha = date('d/m/y h:i:s');
+  $fecha = date('d/m/y h:i');
 
   echo "$fecha <br>";
   

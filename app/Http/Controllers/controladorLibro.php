@@ -21,6 +21,9 @@ class controladorLibro extends Controller
     }
 
     public function Procesar_Libro(validar_Libro $req){
-        return redirect('Registro')->with('confirmacion', 'Libro Guardado');
+        $tit = $req->input('txtTitulo');
+        
+
+        return redirect('Registro')->with('confirmacion', 'Libro Guardado') -> with('Vari', $tit);
     }
 }
