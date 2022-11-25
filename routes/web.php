@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\controladorLibro;
 
+//Exportamos los controladores de tipo resource para la bd
+use App\Http\Controllers\ControladorBDAutor;
+use App\Http\Controllers\ControladorBDLibro;
+
 
 Route::get('welcome', [controladorLibro::class, 'showWelcome']);
 
