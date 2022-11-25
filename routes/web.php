@@ -12,16 +12,16 @@ use App\Http\Controllers\ControladorBDLibro;
 Route::get('welcome', [controladorLibro::class, 'showWelcome']);
 
 Route::get('/', [controladorLibro::class, 'showPrincipal'])->name('Prin');
-//Create
-Route::get('Registro/create', [ControladorBDAutor::class, 'create'])->name('Registro.create');
+
+Route::get('Registro', [controladorLibro::class, 'showRegsitro'])->name('Reg');
 
 
 Route::post('LibroGuardado', [controladorLibro::class, 'Procesar_Libro'])->name('Guard');
 
-
-Route::get('Autor', [controladorLibro::class, 'showAutor'])->name('Au');
-
-Route::post('AutorGuardado', [controladorLibro::class, 'ProcesarAutor'])->name('Gua');
+//Create
+Route::get('Autor/create', [ControladorBDAutor::class, 'create'])->name('Autor.create');
+//store
+Route::post('Autor', [ControladorBDAutor::class, 'store'])->name('Autor.store');
 
 
 

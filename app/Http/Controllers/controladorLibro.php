@@ -18,6 +18,7 @@ class controladorLibro extends Controller
     }
 
     public function showRegsitro(){
+        return view('Registro');
         
     }
 
@@ -30,12 +31,12 @@ class controladorLibro extends Controller
     }
 
     public function showAutor(){
-        return view('Autor');
+        
     }
 
     
     public function ProcesarAutor(ValidarAu $req){
 
-        return redirect('Autor')->with('confirmacion', 'Autor Guardado');
+        
     }
 }

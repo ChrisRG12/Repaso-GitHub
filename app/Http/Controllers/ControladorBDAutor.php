@@ -28,7 +28,7 @@ class ControladorBDAutor extends Controller
      */
     public function create()
     {
-        return view('Registro');
+        return view('Autor');
     }
 
     /**
@@ -37,9 +37,17 @@ class ControladorBDAutor extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ValidarAu $request)
     {
-        //
+        DB::table('tb__autores')->insert([
+            "Nombre"=> $request->input('txtNom'),
+            "Fechanacimiento"=> $request->input('txtfech'),
+            "Librospublicados"=> $request->input('txtlib'),
+            "created_at"=> Carbon::now(),
+            "updated_at"=> Carbon::now(),
+
+        ]);
+        return redirect('Autor/create')->with('confirmacion', 'Autor Guardado');
     }
 
     /**

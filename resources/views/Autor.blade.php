@@ -22,7 +22,7 @@
 
     <div class="card text-center mb-2">
 
-        <form action="AutorGuardado" method="post">
+        <form action="{{route('Autor.store')}}" method="post">
             @csrf
 
             <div class="card-header fw-bolder">
@@ -41,7 +41,7 @@
      
                  <div class="mb-1">
                   <label class="form-label"> Fecha de Nacimiento </label>
-                  <input type="text" class="form-control" name="txtfech" value="{{ old('txtfech')}}">
+                  <input type="date" class="form-control" name="txtfech" value="{{ old('txtfech')}}">
                   <p class="text-secondary fst-Italic"> {{ $errors->first('txtfech') }}</p>
                  </div>
 
