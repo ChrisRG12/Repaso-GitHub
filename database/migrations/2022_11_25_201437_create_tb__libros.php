@@ -14,7 +14,13 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tb__libros', function (Blueprint $table) {
-            $table->id();
+            $table->increments('idLibro');
+            $table->integer('ISNB');
+            $table->string('Titulo');
+            $table->string('Autor');
+            $table->integer('Paginas');
+            $table->string('Editorial');
+            $table->string('Email');
             $table->timestamps();
         });
     }
