@@ -12,8 +12,8 @@ use App\Http\Controllers\ControladorBDLibro;
 Route::get('welcome', [controladorLibro::class, 'showWelcome']);
 
 Route::get('/', [controladorLibro::class, 'showPrincipal'])->name('Prin');
-
-Route::get('Registro', [controladorLibro::class, 'showRegsitro'])->name('Reg');
+//Create
+Route::get('Registro/create', [ControladorBDAutor::class, 'create'])->name('Registro.create');
 
 
 Route::post('LibroGuardado', [controladorLibro::class, 'Procesar_Libro'])->name('Guard');

@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ValidarAu;
+
+use DB;
+use Carbon\Carbon;
+
 
 class ControladorBDAutor extends Controller
 {
@@ -23,7 +28,7 @@ class ControladorBDAutor extends Controller
      */
     public function create()
     {
-        //
+        return view('Registro');
     }
 
     /**

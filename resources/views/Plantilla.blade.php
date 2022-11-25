@@ -37,7 +37,7 @@
                 <a class="nav-link active" aria-current="page" href="/" >Principal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Registro" >Registro</a>
+                <a class="nav-link" href="Registro/create" >Registro</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Autor" >Autor</a>
