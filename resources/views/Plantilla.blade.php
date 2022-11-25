@@ -39,6 +39,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="Registro" >Registro</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="Autor" >Autor</a>
+              </li>
           </div>
         </div>
       </nav>
