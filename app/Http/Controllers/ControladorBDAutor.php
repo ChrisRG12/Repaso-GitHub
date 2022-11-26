@@ -18,7 +18,8 @@ class ControladorBDAutor extends Controller
      */
     public function index()
     {
-        return view('VistaAu');
+        $ConsultaAutores= DB::table('tb__autores')->get();
+        return view ('VistaAu', compact('ConsultaAutores'));
     }
 
     /**
