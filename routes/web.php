@@ -22,6 +22,8 @@ Route::post('LibroGuardado', [controladorLibro::class, 'Procesar_Libro'])->name(
 Route::get('Autor/create', [ControladorBDAutor::class, 'create'])->name('Autor.create');
 //store
 Route::post('Autor', [ControladorBDAutor::class, 'store'])->name('Autor.store');
+//index
+Route::get('VistaAutor', [ControladorBDAutor::class, 'index'])->name('Autor.index');
 
 
 
