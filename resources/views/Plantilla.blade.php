@@ -42,6 +42,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="Autor/create" >Autor</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{route('Autor.index')}}" >Vista de Aurotes</a>
+              </li>
           </div>
         </div>
       </nav>
