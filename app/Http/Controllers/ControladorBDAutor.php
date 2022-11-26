@@ -18,7 +18,7 @@ class ControladorBDAutor extends Controller
      */
     public function index()
     {
-        //
+        return view('VistaAu');
     }
 
     /**
