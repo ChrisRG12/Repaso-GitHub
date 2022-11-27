@@ -18,12 +18,16 @@ Route::get('Registro', [controladorLibro::class, 'showRegsitro'])->name('Reg');
 
 Route::post('LibroGuardado', [controladorLibro::class, 'Procesar_Libro'])->name('Guard');
 
+
+//------------------AUTORESSS----------------------------
 //Create
 Route::get('Autor/create', [ControladorBDAutor::class, 'create'])->name('Autor.create');
 //store
 Route::post('Autor', [ControladorBDAutor::class, 'store'])->name('Autor.store');
 //index
 Route::get('VistaAutor', [ControladorBDAutor::class, 'index'])->name('Autor.index');
+//edit
+Route::get('Autor/{id}/edit', [ControladorBDAutor::class, 'edit'])->name('Autor.edit');
 
 
 

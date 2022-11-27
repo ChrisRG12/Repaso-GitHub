@@ -70,7 +70,7 @@ class ControladorBDAutor extends Controller
      */
     public function edit($id)
     {
-        //
+        echo('Holiwisss Ya llegaste bro');
     }
 
     /**
