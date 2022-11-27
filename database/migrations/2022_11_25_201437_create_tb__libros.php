@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('Editorial');
             $table->string('Email');
             $table->timestamps();
+            $table->unsignedBigInteger('id_alum');
             $table->foreign('id_alum')
                     ->references('idAutor')
                     ->on('tb__autores')
