@@ -2,13 +2,7 @@
 
 @section('contenido')
 
-@if(session()->has('confirmacion'))
-    <div class="alert alert-primary alert-dismissible fade show" role="alert">
-    <strong> Autor Guardado </strong> 
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
 
-@endif
 
 
 <div class="container mt-2  cold-md-5">
@@ -55,7 +49,7 @@
              </div>
      
              <div class="card-footer text-center">
-                 <button type="submit" class="btn btn-secondary btn-lg"> Guardar Libro </button>
+                 <button type="submit" class="btn btn-secondary btn-lg"> Guardar Autor </button>
      
              </form>
      

@@ -48,7 +48,7 @@ class ControladorBDAutor extends Controller
             "updated_at"=> Carbon::now(),
 
         ]);
-        return redirect('Autor/create')->with('confirmacion', 'Autor Guardado');
+        return redirect('VistaAutor')->with('confirmacion', 'Autor Guardado');
     }
 
     /**
@@ -103,6 +103,9 @@ class ControladorBDAutor extends Controller
      */
     public function destroy($id)
     {
-        //
+        DB::table('tb__autores')->where('idAutor', $id)->delete();
+
+        return redirect('VistaAutor')->with('Eliminado', 'Recuerdo Eliminado');
+
     }
 }
