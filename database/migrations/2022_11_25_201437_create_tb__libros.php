@@ -22,12 +22,11 @@ return new class extends Migration
             $table->string('Editorial');
             $table->string('Email');
             $table->timestamps();
-            $table->bigIncrements('id_alum');
-            $table->foreign("id_alum")
-                    ->references("idAutor")
-                    ->on("tb__autores")
-                    ->onDelete("cascade")
-                    ->onUpdate("cascade")
+            $table->foreign('id_alum')
+                    ->references('idAutor')
+                    ->on('tb__autores')
+                    ->onDelete('cascade')
+                    ->onUpdate('cascade')
                     ;
 
         });
