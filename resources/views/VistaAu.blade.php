@@ -27,7 +27,7 @@
             <td>{{ $consulta->Librospublicados }}</td>
             <td>
                 <a href=""> Eliminar</a>
-                <a href="">Editar</a>
+                <a href="{{route('Autor.edit' , $consulta->idAutor)}}">Editar</a>
             </td>
 
           </tr>

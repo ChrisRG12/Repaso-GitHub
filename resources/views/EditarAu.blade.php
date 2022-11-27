@@ -2,43 +2,60 @@
 
 @section('contenido')
 
-<div class="container mt-2  mb-3 cold-md-5">
-    
 
-    <table class="table mt-5 mb-5 ">
+<div class="container mt-2  cold-md-5">
+  @if ($errors->any())
+   
+  @foreach ($errors->all() as $error)
 
-        <thead>
-            
-          <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Fecha</th>
-            <th scope="col">Libros</th>
-            <th scope="col">Opciones</th>
-          </tr>
-         
-        </thead>
-        <tbody>
-            @foreach ($ConsultaAutores as $consulta)
-          <tr>
-            <th scope="row">{{ $consulta->idAutor }}</th>
-            <td>{{ $consulta->Nombre }}</td>
-            <td>{{ $consulta->Fechanacimiento }}</td>
-            <td>{{ $consulta->Librospublicados }}</td>
-            <td>
-                <a href=""> Eliminar</a>
-                <a href="">Editar</a>
-            </td>
+  @endforeach
+      
+  @endif
 
-          </tr>
-          @endforeach
-        </tbody>
+  <div class="card text-center mb-2">
 
-      </table>
+      <form action="#" method="post">
+          @csrf
 
+          <div class="card-header fw-bolder">
+              Correcciones !!
+           </div>
+   
+           <div class="card-body ">
+   
+   
+               <div class="mb-1">
+                 <label class="form-label"> Nombre Completo </label>
+                <input type="text" class="form-control" name="txtNom" value="{{ $consultaId->Nombre }}">
+                <p class="text-secondary fst-Italic"> {{ $errors->first('txtNom') }} </p>
+               </div>
+   
+   
+               <div class="mb-1">
+                <label class="form-label"> Fecha de Nacimiento </label>
+                <input type="date" class="form-control" name="txtfech" value="{{ $consultaId->Fechanacimiento }}">
+                <p class="text-secondary fst-Italic"> {{ $errors->first('txtfech') }}</p>
+               </div>
 
-
-
-
-</div>
+               <div class="mb-1">
+                <label class="form-label"> No. Libros Publicados  </label>
+                <input type="number" class="form-control" name="txtlib" value="{{ $consultaId->Librospublicados }}">
+                <p class="text-secondary fst-Italic"> {{ $errors->first('txtlib') }}</p>
+               </div>
+   
+   
+           </div>
+   
+           <div class="card-footer text-center">
+               <button type="submit" class="btn btn-secondary btn-lg"> Actualizar Autor </button>
+   
+           </form>
+   
+           </div>
+   
+       </div>
+   
+   
+   </div>
+  </div>
 @stop

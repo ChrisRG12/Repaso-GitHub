@@ -70,7 +70,8 @@ class ControladorBDAutor extends Controller
      */
     public function edit($id)
     {
-        return view('EditarAu');
+        $consultaId = DB::table('tb__autores')->where('idAutor',$id)->first();
+        return view('EditarAu', compact('consultaId'));
     }
 
     /**
@@ -80,7 +81,7 @@ class ControladorBDAutor extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(ValidarAu $request, $id)
     {
         //
     }
