@@ -33,7 +33,7 @@ Route::put('Autor/{id}', [ControladorBDAutor::class, 'update'])->name('Autor.upd
 //show
 Route::get('Eliminar/{id}/show', [ControladorBDAutor::class, 'show']) -> name('Eliminar.show');
 //destroy
-Route::delete('Autor/{id}', [ControladorBDAutor::class, 'destroy']) -> name('Auror.destroy');
+Route::delete('Autor/{id}', [ControladorBDAutor::class, 'destroy']) -> name('Autor.destroy');
 
 
 
