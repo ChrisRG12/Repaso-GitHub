@@ -14,8 +14,10 @@
 
   <div class="card text-center mb-2">
 
-      <form action="#" method="post">
+      <form action="{{route('Autor.update', $consultaId->idRecuerdo)}}" method="post">
           @csrf
+
+          @method('PUT');
 
           <div class="card-header fw-bolder">
               Correcciones !!
