@@ -83,7 +83,13 @@ class ControladorBDAutor extends Controller
      */
     public function update(ValidarAu $request, $id)
     {
-        //
+        DB::table('tb__autores')->where('idAutor', $id)->update([
+            "Nombre"=> $request->input('txtNom'),
+            "Fechanacimiento"=> $request->input('txtfech'),
+            "Librospublicados"=> $request->input('txtlib'),
+            "updated_at"=> Carbon::now(),
+
+        ]);
     }
 
     /**

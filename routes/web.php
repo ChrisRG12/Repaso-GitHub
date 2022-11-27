@@ -28,7 +28,8 @@ Route::post('Autor', [ControladorBDAutor::class, 'store'])->name('Autor.store');
 Route::get('VistaAutor', [ControladorBDAutor::class, 'index'])->name('Autor.index');
 //edit
 Route::get('Autor/{id}/edit', [ControladorBDAutor::class, 'edit'])->name('Autor.edit');
-
+//update
+Route::put('Autor/{id}', [ControladorBDAutor::class, 'update'])->name('Autor.update');
 
 
 
