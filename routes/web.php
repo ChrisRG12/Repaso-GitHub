@@ -30,6 +30,10 @@ Route::get('VistaAutor', [ControladorBDAutor::class, 'index'])->name('Autor.inde
 Route::get('Autor/{id}/edit', [ControladorBDAutor::class, 'edit'])->name('Autor.edit');
 //update
 Route::put('Autor/{id}', [ControladorBDAutor::class, 'update'])->name('Autor.update');
+//show
+Route::get('Eliminar/{id}/show', [ControladorBDAutor::class, 'show']) -> name('Eliminar.show');
+//destroy
+Route::delete('Autor/{id}', [ControladorBDAutor::class, 'destroy']) -> name('Auror.destroy');
 
 
 
