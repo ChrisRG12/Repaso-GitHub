@@ -90,6 +90,7 @@ class ControladorBDAutor extends Controller
             "updated_at"=> Carbon::now(),
 
         ]);
+        return redirect('VistaAutor')->with('Actualizar', 'Autor Actualizado');
     }
 
     /**

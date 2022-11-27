@@ -14,7 +14,7 @@
 
   <div class="card text-center mb-2">
 
-      <form action="{{route('Autor.update', $consultaId->idRecuerdo)}}" method="post">
+      <form action="{{route('Autor.update', $consultaId->idAutor)}}" method="post">
           @csrf
 
           @method('PUT');
