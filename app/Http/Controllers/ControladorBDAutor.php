@@ -59,7 +59,9 @@ class ControladorBDAutor extends Controller
      */
     public function show($id)
     {
-        //
+        $consultaId = DB::table('tb__autores')->where('idAutor',$id)->first();
+        return view('EliminarAu', compact('consultaId'));
+
     }
 
     /**
