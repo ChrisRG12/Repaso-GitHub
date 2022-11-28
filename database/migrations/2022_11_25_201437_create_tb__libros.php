@@ -14,6 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tb__libros', function (Blueprint $table) {
+            $table->engine="InnoDB";
             $table->increments('idLibro');
             $table->integer('ISNB');
             $table->string('Titulo');
