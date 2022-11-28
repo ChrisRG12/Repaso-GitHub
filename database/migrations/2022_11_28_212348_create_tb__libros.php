@@ -15,21 +15,16 @@ return new class extends Migration
     {
         Schema::create('tb__libros', function (Blueprint $table) {
             $table->engine="InnoDB";
-            $table->increments('idLibro');
-            $table->integer('ISNB');
-            $table->string('Titulo');
-            $table->string('Autor');
-            $table->integer('Paginas');
-            $table->string('Editorial');
-            $table->string('Email');
+            $table->bigIncrements('idLibro');
+            $table->integer('isbn');
+            $table->string('titulo');
+            $table->unsignedBigInteger('autor_id');
+            $table->integer('paginas');
+            $table->string('editorial');
+            $table->string('correo');
             $table->timestamps();
-            $table->unsignedBigInteger('id_au');
-            $table->foreign('id_au')
-                    ->references('idAutor')
-                    ->on('tb__autores')
-                    ->onDelete('cascade')
-                    ->onUpdate('cascade')
-                    ;
+            $table->foreign('autor_id')->references('idAutor')->on('tb_autores')->onDelete('cascade');
+
 
         });
     }
