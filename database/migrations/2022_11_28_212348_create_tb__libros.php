@@ -24,8 +24,6 @@ return new class extends Migration
             $table->string('correo');
             $table->timestamps();
             $table->foreign('autor_id')->references('idAutor')->on('tb_autores')->onDelete('cascade');
-
-
         });
     }
 
