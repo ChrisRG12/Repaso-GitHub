@@ -1,35 +1,23 @@
 @extends('plantilla')
 
 @section('contenido')
+
 @if(session()->has('confirmacion'))
-    <div class="alert alert-primary alert-dismissible fade show" role="alert">
-    <strong> Autor Guardado </strong> 
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-  </div>
 
-@endif
+<?php
+$titulo = session()->get('Vari');
+?>
 
-@if(session()->has('Actualizar'))
 {!! 
 " <script> 
       Swal.fire(
       'Muy Bien Very Good!',
-      'Autor Editado',
+      'Libro: {$titulo} Registrado Correctamente',
       'success'  
 ) </script> "!!}
 
 @endif
 
-@if(session()->has('Eliminado'))
-{!! 
-" <script> 
-      Swal.fire(
-      'Muy Bien Very Good!',
-      'Autor Eliminado',
-      'success'  
-) </script> "!!}
-
-@endif
 
 
 <div class="container mt-2  mb-3 cold-md-5">

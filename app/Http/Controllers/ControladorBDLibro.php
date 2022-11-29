@@ -57,7 +57,7 @@ class ControladorBDLibro extends Controller
 
         $tit = $request->input('txtTitulo');
 
-        return redirect('Registro/create')->with('confirmacion', 'Libro Guardado') -> with('Vari', $tit);
+        return redirect('VistaLibro')->with('confirmacion', 'Libro Guardado') -> with('Vari', $tit);
     }
 
     /**
