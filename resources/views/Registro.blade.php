@@ -61,10 +61,10 @@ $titulo = session()->get('Vari');
             <div class="mb-4">
                 <label for="text" class="form-label" placeholder="Autor">Autor</label>
                 <select class="form-select" name="txtAutor" aria-label="Default select example">
-                    <option selected>Selecciona un autor...</option>
+                    <option selected>Selecciona un autor:</option>
                     
                     @foreach ($categorias as $tb_autores)
-                        <option value="{{$tb_autores['idAutores']}}">{{$tb_autores['nombre']}}</option>
+                        <option value="{{$tb_autores['idAutor']}}">{{$tb_autores['Nombre']}}</option>
                     @endforeach
 
                   </select>
