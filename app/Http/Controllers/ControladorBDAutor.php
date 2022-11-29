@@ -18,7 +18,7 @@ class ControladorBDAutor extends Controller
      */
     public function index()
     {
-        $ConsultaAutores= DB::table('tb__autores')->get();
+        $ConsultaAutores= DB::table('tb_autores')->get();
         return view ('VistaAu', compact('ConsultaAutores'));
     }
 
@@ -59,7 +59,7 @@ class ControladorBDAutor extends Controller
      */
     public function show($id)
     {
-        $consultaId = DB::table('tb__autores')->where('idAutor',$id)->first();
+        $consultaId = DB::table('tb_autores')->where('idAutor',$id)->first();
         return view('EliminarAu', compact('consultaId'));
 
     }
@@ -72,7 +72,7 @@ class ControladorBDAutor extends Controller
      */
     public function edit($id)
     {
-        $consultaId = DB::table('tb__autores')->where('idAutor',$id)->first();
+        $consultaId = DB::table('tb_autores')->where('idAutor',$id)->first();
         return view('EditarAu', compact('consultaId'));
     }
 
@@ -85,7 +85,7 @@ class ControladorBDAutor extends Controller
      */
     public function update(ValidarAu $request, $id)
     {
-        DB::table('tb__autores')->where('idAutor', $id)->update([
+        DB::table('tb_autores')->where('idAutor', $id)->update([
             "Nombre"=> $request->input('txtNom'),
             "Fechanacimiento"=> $request->input('txtfech'),
             "Librospublicados"=> $request->input('txtlib'),
@@ -103,7 +103,7 @@ class ControladorBDAutor extends Controller
      */
     public function destroy($id)
     {
-        DB::table('tb__autores')->where('idAutor', $id)->delete();
+        DB::table('tb_autores')->where('idAutor', $id)->delete();
 
         return redirect('VistaAutor')->with('Eliminado', 'Recuerdo Eliminado');
 

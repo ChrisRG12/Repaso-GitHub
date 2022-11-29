@@ -18,7 +18,7 @@ class controladorLibro extends Controller
     }
 
     public function showRegsitro(){
-        return view('Registro');
+      
         
     }
 

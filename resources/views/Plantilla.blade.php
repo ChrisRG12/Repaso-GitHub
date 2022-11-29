@@ -13,7 +13,7 @@
 </head>
 
 
-<body class=" text-center ">
+<body>
     <!-- Agregamos un style para el fondo de las vistas -->
     <style>
         body{
@@ -37,7 +37,7 @@
                 <a class="nav-link active" aria-current="page" href="/" >Principal</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="Registro" >Registro</a>
+                <a class="nav-link" href="Registro/create" >Registro</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="Autor/create" >Autor</a>

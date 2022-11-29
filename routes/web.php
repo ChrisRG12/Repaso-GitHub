@@ -35,7 +35,9 @@ Route::get('Eliminar/{id}/show', [ControladorBDAutor::class, 'show']) -> name('E
 //destroy
 Route::delete('Autor/{id}', [ControladorBDAutor::class, 'destroy']) -> name('Autor.destroy');
 
-
+//------------------LIBROSSS----------------------------
+//Create
+Route::get('Registro/create', [ControladorBDLibro::class, 'create'])->name('Libro.create');
 
 
 

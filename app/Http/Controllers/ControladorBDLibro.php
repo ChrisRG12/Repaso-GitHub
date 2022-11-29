@@ -23,7 +23,7 @@ class ControladorBDLibro extends Controller
      */
     public function create()
     {
-        //
+        return view('Registro');
     }
 
     /**
