@@ -55,9 +55,7 @@ class ControladorBDLibro extends Controller
 
         ]);
 
-        $tit = $request->input('txtTitulo');
-
-        return redirect('VistaLibro')->with('confirmacion', 'Libro Guardado') -> with('Vari', $tit);
+        return redirect('VistaLi')->with('confirmacion', 'Libro Actualizado');
     }
 
     /**
@@ -94,7 +92,19 @@ class ControladorBDLibro extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        DB::table('tb_libros')->where('idLibro', $id)->update([
+
+            "Titulo"=> $request->input('txtTitulo'),
+            "ISBN"=> $request->input('ISNB'),
+            "paginas"=> $request->input('NumPaginas'),
+            "autor_id"=> $request->input('txtAutor'),
+            "editorial"=> $request->input('txtEditorial'),
+            "correo"=> $request->input('txtEmail'),
+            "updated_at"=> Carbon::now(),
+
+        ]);
+
+        return redirect('consulLi')->with('actuali', 'bca');
     }
 
     /**
