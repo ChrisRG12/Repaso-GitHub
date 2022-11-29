@@ -21,25 +21,26 @@
 
     <div class="card text-center mb-2">
 
-        <form action="{{route('Registro.store')}}" method="post">
+        <form action="#" method="post">
             @csrf
+            @method('PUT');
 
 
         <div class="card-header fw-bolder">
-           Registro  de Libros 
+            Correcciones !!
         </div>
 
         <div class="card-body ">
 
             <div class="mb-1">
                 <label class="form-label"> ISNB </label>
-                <input type="Number" class="form-control" name="ISNB" placeholder="ISNB --Solo Numeros, Minimo 13--" value="{{ old('ISNB')}}">
+                <input type="Number" class="form-control" name="ISNB" placeholder="ISNB --Solo Numeros, Minimo 13--" value="{{ $consultaId->ISNB }}">>
                 <p class="text-secondary fst-Italic"></p>
                 </div>
 
             <div class="mb-1">
              <label class="form-label"> Titulo</label>
-             <input type="text" class="form-control" name="txtTitulo" placeholder="Titulo" value="{{ old('txtTitulo')}}">
+             <input type="text" class="form-control" name="txtTitulo" placeholder="Titulo" value="{{ $consultaId->Titulo }}">>
              <p class="text-secondary fst-Italic"></p>
             </div>
 
@@ -61,19 +62,19 @@
 
             <div class="mb-1">
              <label class="form-label"> Paginas</label>
-             <input type="Number" class="form-control" name="NumPaginas" placeholder="Numero de Paginas --Solo numeros--" value="{{ old('NumPaginas')}}">
+             <input type="Number" class="form-control" name="NumPaginas" placeholder="Numero de Paginas --Solo numeros--" value="{{ $consultaId->paginas }}">>
              <p class="text-secondary fst-Italic"></p>
             </div>
 
             <div class="mb-1">
              <label class="form-label"> Editorial</label>
-             <input type="text" class="form-control" name="txtEditorial" placeholder="Editorial" value="{{ old('txtEditorial')}}">
+             <input type="text" class="form-control" name="txtEditorial" placeholder="Editorial" value="{{ $consultaId->editorial }}">>
              <p class="text-secondary fst-Italic"></p>
             </div>
 
             <div class="mb-1">
              <label class="form-label"> Email Editorial </label>
-             <input type="Email" class="form-control" name="txtEmail" placeholder="Correo de la Editorial " value="{{ old('txtEmail')}}">
+             <input type="Email" class="form-control" name="txtEmail" placeholder="Correo de la Editorial " value="{{ $consultaId->correo }}">>
              <p class="text-secondary fst-Italic"></p>
             </div>
 
@@ -81,7 +82,7 @@
         </div>
 
         <div class="card-footer text-center">
-            <button type="submit" class="btn btn-secondary btn-lg"> Guardar Libro </button>
+            <button type="submit" class="btn btn-secondary btn-lg"> Actualizar Libro </button>
 
         </form>
 
