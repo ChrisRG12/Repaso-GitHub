@@ -96,7 +96,7 @@ class ControladorBDLibro extends Controller
 
         ]);
 
-        return redirect('VistaLibro')->with('actualizado', 'Libro Actualizado');
+        return redirect('VistaLibro')->with('Actualizar', 'Libro Actualizado');
     }
     
     /**
@@ -120,6 +120,6 @@ class ControladorBDLibro extends Controller
     public function destroy($id)
     {
         DB::table('tb_libros')->where('idLibro', $id)->delete();
-        return redirect('VistaLibro')->with('borrado', 'Libro Borrado');
+        return redirect('VistaLibro')->with('Eliminado', 'Libro Borrado');
     }
 }

@@ -18,6 +18,28 @@ $titulo = session()->get('Vari');
 
 @endif
 
+@if(session()->has('Actualizar'))
+{!! 
+" <script> 
+      Swal.fire(
+      'Muy Bien Very Good!',
+      'Libro Editado',
+      'success'  
+) </script> "!!}
+
+@endif
+
+@if(session()->has('Eliminado'))
+{!! 
+" <script> 
+      Swal.fire(
+      'Muy Bien Very Good!',
+      'Libro Eliminado',
+      'success'  
+) </script> "!!}
+
+@endif
+
 
 
 <div class="container mt-2  mb-3 cold-md-5">
