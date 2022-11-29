@@ -55,19 +55,11 @@ class ControladorBDLibro extends Controller
 
         ]);
 
-        return redirect('VistaLi')->with('confirmacion', 'Libro Actualizado');
+        $tit = $request->input('txtTitulo');
+
+        return redirect('VistaLibro')->with('confirmacion', 'Libro Guardado') -> with('Vari', $tit);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
 
     /**
      * Show the form for editing the specified resource.
@@ -104,7 +96,18 @@ class ControladorBDLibro extends Controller
 
         ]);
 
-        return redirect('consulLi')->with('actuali', 'bca');
+        return redirect('VistaLibro')->with('actualizado', 'Libro Actualizado');
+    }
+    
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function show($id)
+    {
+        
     }
 
     /**
@@ -115,6 +118,6 @@ class ControladorBDLibro extends Controller
      */
     public function destroy($id)
     {
-        //
+        
     }
 }

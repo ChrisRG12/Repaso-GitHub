@@ -46,6 +46,10 @@ Route::get('VistaLibro', [ControladorBDLibro::class, 'index'])->name('Libro.inde
 Route::get('Libro/{id}/edit', [ControladorBDLibro::class, 'edit'])->name('Libro.edit');
 //update
 Route::put('Libro/{id}', [ControladorBDLibro::class, 'update'])->name('Libro.update');
+//show
+Route::get('Eliminar/{id}/show', [ControladorBDLibro::class, 'show']) -> name('Eliminar.show');
+//destroy
+Route::delete('Libro/{id}', [ControladorBDLibro::class, 'destroy']) -> name('Libro.destroy');
 
 
 
