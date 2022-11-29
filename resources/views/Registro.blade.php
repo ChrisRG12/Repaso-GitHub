@@ -58,11 +58,19 @@ $titulo = session()->get('Vari');
              <p class="text-secondary fst-Italic"></p>
             </div>
 
+            <div class="mb-4">
+                <label for="text" class="form-label" placeholder="Autor">Autor</label>
+                <select class="form-select" name="txtAutor" aria-label="Default select example">
+                    <option selected>Selecciona un autor...</option>
+                    
+                    @foreach ($categorias as $tb_autores)
+                        <option value="{{$tb_autores['idAutores']}}">{{$tb_autores['nombre']}}</option>
+                    @endforeach
 
-            <div class="mb-1">
-              <label class="form-label"> Autor</label>
-             <input type="text" class="form-control" name="txtAutor" placeholder="Autor" value="{{ old('txtAutor')}}">
-             <p class="text-secondary fst-Italic"></p>
+                  </select>
+                <p class="text-secondary fst-Italic">
+                    {{$errors->first('txtAutor')}}
+                </p>
             </div>
 
 
