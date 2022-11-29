@@ -9,14 +9,10 @@ use App\Http\Controllers\ControladorBDAutor;
 use App\Http\Controllers\ControladorBDLibro;
 
 
-Route::get('welcome', [controladorLibro::class, 'showWelcome']);
 
 Route::get('/', [controladorLibro::class, 'showPrincipal'])->name('Prin');
 
-Route::get('Registro', [controladorLibro::class, 'showRegsitro'])->name('Reg');
-
-
-Route::post('LibroGuardado', [controladorLibro::class, 'Procesar_Libro'])->name('Guard');
+Route::get('Inicio', [controladorLibro::class, 'showInicio'])->name('Reg');
 
 
 //------------------AUTORESSS----------------------------

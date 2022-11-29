@@ -17,6 +17,10 @@ class controladorLibro extends Controller
         return view('Principal');
     }
 
+    public function showInicio(){
+        return view('Inicio');
+    }
+
     public function showRegsitro(){
       
         

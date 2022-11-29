@@ -17,7 +17,7 @@
 
         <div class="card-body">
             <p class="card-text ">El Día de las Bibliotecas se celebra cada 24 de octubre desde el año 1997. Este día nació como iniciativa de la Asociación Española de Amigos del Libro Infantil y Juvenil con el objetivo de concienciar a la sociedad de la importancia de la lectura y como homenaje y reconocimiento a la labor de los bibliotecarios/as.</p>
-            <a href="Registro/create" class="btn btn-secondary"> Registro de Libros </a>
+            <a href="Inicio" class="btn btn-secondary"> Inicio </a>
         </div>
 
     </div>

@@ -12,7 +12,7 @@ $titulo = session()->get('Vari');
 " <script> 
       Swal.fire(
       'Muy Bien Very Good!',
-      'Libro: {$titulo} Registrado Correctamente',
+      'Libro: {$titulo}, Registrado Correctamente',
       'success'  
 ) </script> "!!}
 
@@ -50,7 +50,7 @@ $titulo = session()->get('Vari');
         <thead>
             
           <tr>
-            <th scope="col">ID</th>
+            <th scope="col">Id</th>
             <th scope="col">Titulo</th>
             <th scope="col">ISBN</th>
             <th scope="col">Paginas</th>
