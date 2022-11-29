@@ -43,18 +43,18 @@ class ControladorBDLibro extends Controller
     public function store(validar_Libro $request)
     {
         DB::table('tb_libros')->insert([
-            "Titulo"=> $req->input('txtTitulo'),
-            "ISBN"=> $req->input('ISNB'),
-            "paginas"=> $req->input('NumPaginas'),
-            "autor_id"=> $req->input('txtAutor'),
-            "editorial"=> $req->input('txtEditorial'),
-            "correo"=> $req->input('txtEmail'),
+            "Titulo"=> $request->input('txtTitulo'),
+            "ISBN"=> $request->input('ISNB'),
+            "paginas"=> $request->input('NumPaginas'),
+            "autor_id"=> $request->input('txtAutor'),
+            "editorial"=> $request->input('txtEditorial'),
+            "correo"=> $request->input('txtEmail'),
             "created_at"=> Carbon::now(),
             "updated_at"=> Carbon::now(),
 
         ]);
 
-        $tit = $req->input('txtTitulo');
+        $tit = $request->input('txtTitulo');
 
         return redirect('Registro/create')->with('confirmacion', 'Libro Guardado') -> with('Vari', $tit);
     }
