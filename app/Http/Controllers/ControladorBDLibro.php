@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Http\Requests\validar_Libro;
+
+use DB;
+use Carbon\Carbon;
+
 class ControladorBDLibro extends Controller
 {
     /**
@@ -32,9 +37,23 @@ class ControladorBDLibro extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(validar_Libro $request)
     {
-        //
+        DB::table('tb_libros')->insert([
+            "Titulo"=> $req->input('txtTitulo'),
+            "ISBN"=> $req->input('ISNB'),
+            "paginas"=> $req->input('NumPaginas'),
+            "autor_id"=> $req->input('txtAutor'),
+            "editorial"=> $req->input('txtEditorial'),
+            "correo"=> $req->input('txtEmail'),
+            "created_at"=> Carbon::now(),
+            "updated_at"=> Carbon::now(),
+
+        ]);
+
+        $tit = $req->input('txtTitulo');
+        
+        return redirect('Registro/create')->with('confirmacion', 'Libro Guardado') -> with('Vari', $tit);
     }
 
     /**
