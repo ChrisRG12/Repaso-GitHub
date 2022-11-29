@@ -45,7 +45,7 @@ $titulo = session()->get('Vari');
 <div class="container mt-2  mb-3 cold-md-5">
     
 
-    <table class="table table-success table-striped mt-5 mb-5 ">
+    <table class="table table-secondary table-striped mt-5 mb-5 ">
 
         <thead>
             
@@ -72,8 +72,8 @@ $titulo = session()->get('Vari');
             <td>{{$consulta->editorial}}</td>
             <td>{{$consulta->correo}}</td>
              <td>
-                <a href="{{route('Eliminar.show' , $consulta->idLibro)}}"> Eliminar</a>
-                <a href="{{route('Libro.edit' , $consulta->idLibro)}}">Editar</a>
+                <a href="{{route('Eliminar.show' , $consulta->idLibro)}}" class="btn btn-outline-danger"> Eliminar</a>
+                <a href="{{route('Libro.edit' , $consulta->idLibro)}}" class="btn btn-outline-success">Editar</a>
             </td>
 
           </tr>

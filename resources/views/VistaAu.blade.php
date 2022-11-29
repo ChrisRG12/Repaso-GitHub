@@ -35,7 +35,7 @@
 <div class="container mt-2  mb-3 cold-md-5">
     
 
-    <table class="table table-success table-striped mt-5 mb-5 ">
+    <table class="table table-secondary table-striped mt-5 mb-5 ">
 
         <thead>
             
@@ -56,8 +56,8 @@
             <td>{{ $consulta->Fechanacimiento }}</td>
             <td>{{ $consulta->Librospublicados }}</td>
             <td>
-                <a href="{{route('Eliminar.show' , $consulta->idAutor)}}"> Eliminar</a>
-                <a href="{{route('Autor.edit' , $consulta->idAutor)}}">Editar</a>
+                <a href="{{route('Eliminar.show' , $consulta->idAutor)}}" class="btn btn-outline-danger"> Eliminar</a>
+                <a href="{{route('Autor.edit' , $consulta->idAutor)}}" class="btn btn-outline-success">Editar</a>
             </td>
 
           </tr>
