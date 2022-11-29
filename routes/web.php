@@ -40,6 +40,8 @@ Route::delete('Autor/{id}', [ControladorBDAutor::class, 'destroy']) -> name('Aut
 Route::get('Registro/create', [ControladorBDLibro::class, 'create'])->name('Libro.create');
 //store
 Route::post('Registro', [ControladorBDLibro::class, 'store'])->name('Registro.store');
+//index
+Route::get('VistaLibro', [ControladorBDLibro::class, 'index'])->name('Libro.index');
 
 
 
