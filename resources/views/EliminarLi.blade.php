@@ -26,7 +26,6 @@
           <div class="card-body">
   
             <h5 class="card-title">  {{ $consultaId->Titulo  }}</h5>
-            <p class="card-text">  {{ $consultaId->ISBN  }} </p>
             <p class="card-text">  {{ $consultaId->paginas  }} </p>
             <p class="card-text">  {{ $consultaId->editorial  }} </p>
 
@@ -36,7 +35,7 @@
           <div class="card-footer text-muted">
             <button type="submit" class="btn btn-danger">Eliminar Libro</button>
              
-          <a href="#" class="btn btn-secondary"> No, Me arrepenti</a>
+          <a href="{{route('Libro.index')}}" class="btn btn-secondary"> No, Me arrepenti</a>
           </div>
         </form>
   

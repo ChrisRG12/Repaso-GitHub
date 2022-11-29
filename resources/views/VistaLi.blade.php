@@ -50,7 +50,7 @@ $titulo = session()->get('Vari');
             <td>{{$consulta->editorial}}</td>
             <td>{{$consulta->correo}}</td>
              <td>
-                <a href=""> Eliminar</a>
+                <a href="{{route('Eliminar.show' , $consulta->idLibro)}}"> Eliminar</a>
                 <a href="{{route('Libro.edit' , $consulta->idLibro)}}">Editar</a>
             </td>
 
