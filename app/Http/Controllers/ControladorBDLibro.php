@@ -20,7 +20,8 @@ class ControladorBDLibro extends Controller
      */
     public function index()
     {
-        //
+        $ConsultaLibros= DB::table('tb_libros')->get();
+        return view ('VistaLi', compact('ConsultaLibros'));
     }
 
     /**
