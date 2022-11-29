@@ -42,7 +42,10 @@ Route::get('Registro/create', [ControladorBDLibro::class, 'create'])->name('Libr
 Route::post('Registro', [ControladorBDLibro::class, 'store'])->name('Registro.store');
 //index
 Route::get('VistaLibro', [ControladorBDLibro::class, 'index'])->name('Libro.index');
-
+//edit
+Route::get('Libro/{id}/edit', [ControladorBDLibro::class, 'edit'])->name('Libro.edit');
+//update
+Route::put('Libro/{id}', [ControladorBDLibro::class, 'update'])->name('Libro.update');
 
 
 

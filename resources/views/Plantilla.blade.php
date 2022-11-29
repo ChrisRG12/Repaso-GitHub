@@ -61,7 +61,7 @@
 
  <!-- Pie de Pagina -->
 
-<div class="alert alert-dark" role="alert">
+<div class="alert alert-dark text-center" role="alert">
   Libreria 2022 CopyRight© 
   <?php
 
