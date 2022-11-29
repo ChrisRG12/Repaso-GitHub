@@ -40,7 +40,7 @@ class ControladorBDAutor extends Controller
      */
     public function store(ValidarAu $request)
     {
-        DB::table('tb__autores')->insert([
+        DB::table('tb_autores')->insert([
             "Nombre"=> $request->input('txtNom'),
             "Fechanacimiento"=> $request->input('txtfech'),
             "Librospublicados"=> $request->input('txtlib'),
