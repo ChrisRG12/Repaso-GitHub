@@ -107,7 +107,8 @@ class ControladorBDLibro extends Controller
      */
     public function show($id)
     {
-        
+        $consultaId = DB::table('tb_libros')->where('idLibro',$id)->first();
+        return view('EliminarLi', compact('consultaId'));
     }
 
     /**
