@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tb__autores', function (Blueprint $table) {
+        Schema::create('tb_autores', function (Blueprint $table) {
             $table->engine="InnoDB";
-            $table->increments('idAutor');
+            $table->bigIncrements('idAutor');
             $table->string('Nombre');
             $table->date('Fechanacimiento');
             $table->integer('Librospublicados');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb__autores');
+        Schema::dropIfExists('tb_autores');
     }
 };

@@ -13,17 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tb__libros', function (Blueprint $table) {
-            $table->engine="InnoDB";
+        Schema::create('tb_libros', function (Blueprint $table) {
             $table->bigIncrements('idLibro');
-            $table->integer('isbn');
-            $table->string('titulo');
-            $table->unsignedBigInteger('autor_id');
+            $table->string('Titulo');
+            $table->char('ISBN');
             $table->integer('paginas');
+            $table->unsignedBigInteger('autor_id');
             $table->string('editorial');
             $table->string('correo');
             $table->timestamps();
             $table->foreign('autor_id')->references('idAutor')->on('tb_autores')->onDelete('cascade');
+
         });
     }
 
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tb__libros');
+        Schema::dropIfExists('tb_libros');
     }
 };
