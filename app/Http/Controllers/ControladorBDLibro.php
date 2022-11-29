@@ -119,6 +119,7 @@ class ControladorBDLibro extends Controller
      */
     public function destroy($id)
     {
-        
+        DB::table('tb_libros')->where('idLibro', $id)->delete();
+        return redirect('VistaLibro')->with('borrado', 'Libro Borrado');
     }
 }
