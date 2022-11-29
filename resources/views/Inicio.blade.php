@@ -10,6 +10,9 @@
                 <div class="card-header fw-bolder">
                     Registrar Libro
                  </div>
+                 <div class="card-body ">
+                    <img src="\Imagenes\" class="card-img-top" alt="...">
+                 </div>
                 
             </div>
 
@@ -17,6 +20,9 @@
                 <div class="card-header fw-bolder">
                     Registrar Autor
                  </div>
+                 <div class="card-body ">
+                    <img src="\Imagenes\" class="card-img-top" alt="...">
+                </div>
 
             </div>
 
@@ -24,6 +30,9 @@
                 <div class="card-header fw-bolder">
                    Ver Libros
                  </div>
+                 <div class="card-body ">
+                    <img src="\Imagenes\" class="card-img-top" alt="...">
+                </div>
 
             </div>
 
@@ -31,6 +40,9 @@
                 <div class="card-header fw-bolder">
                     Ver Autores
                  </div>
+                 <div class="card-body ">
+                    <img src="\Imagenes\" class="card-img-top" alt="...">
+                </div>
 
             </div>
 
