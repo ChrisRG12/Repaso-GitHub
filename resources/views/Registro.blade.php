@@ -36,7 +36,7 @@ $titulo = session()->get('Vari');
 
     <div class="card text-center mb-2">
 
-        <form action="LibroGuardado" method="post">
+        <form action="{{route('Registro.store')}}" method="post">
             @csrf
 
 

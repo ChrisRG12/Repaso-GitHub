@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Models\tb_autores;
+use App\Models\tb_libros;
 
 use Illuminate\Http\Request;
 
