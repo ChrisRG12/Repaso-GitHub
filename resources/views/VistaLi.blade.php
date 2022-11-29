@@ -28,24 +28,30 @@ $titulo = session()->get('Vari');
         <thead>
             
           <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Fecha</th>
-            <th scope="col">Libros</th>
+            <th scope="col">ID</th>
+            <th scope="col">Titulo</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Paginas</th>
+            <th scope="col">Autor</th>
+            <th scope="col">Editorial</th>
+            <th scope="col">Email</th>
             <th scope="col">Opciones</th>
           </tr>
-         
+
         </thead>
         <tbody>
-            @foreach ($ConsultaAutores as $consulta)
+            @foreach ($ConsultaLibros as $consulta)
           <tr>
-            <th scope="row">{{ $consulta->idAutor }}</th>
-            <td>{{ $consulta->Nombre }}</td>
-            <td>{{ $consulta->Fechanacimiento }}</td>
-            <td>{{ $consulta->Librospublicados }}</td>
-            <td>
-                <a href="{{route('Eliminar.show' , $consulta->idAutor)}}"> Eliminar</a>
-                <a href="{{route('Autor.edit' , $consulta->idAutor)}}">Editar</a>
+            <th scope="row">{{$consulta->idLibro}}</th>
+            <td>{{$consulta->Titulo}}</td>
+            <td>{{$consulta->ISBN}}</td>
+            <td>{{$consulta->paginas}}</td>
+            <td>{{$consulta->autor_id}}</td>
+            <td>{{$consulta->editorial}}</td>
+            <td>{{$consulta->correo}}</td>
+             <td>
+                <a href="#"> Eliminar</a>
+                <a href="#">Editar</a>
             </td>
 
           </tr>
