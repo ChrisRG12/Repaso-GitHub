@@ -79,8 +79,10 @@ class ControladorBDLibro extends Controller
      */
     public function edit($id)
     {
-        $consultaId = DB::table('tb_libros')->where('idLibro',$id)->first();
-        return view('EditarLib', compact('consultaId'));
+        $consultaId = DB::table('tb_libros')->where('idLibro', $id)->first();
+        $categorias = tb_autores::all();
+        return view('EditarLib', compact('consultaId', 'categorias'));
+
     }
 
     /**

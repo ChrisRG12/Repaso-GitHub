@@ -21,9 +21,9 @@
 
     <div class="card text-center mb-2">
 
-        <form action="#" method="post">
+        <form action="{{route('Libro.update', $consultaId->idLibro)}}" method="post">
             @csrf
-            @method('PUT');
+            @method('PUT')
 
 
         <div class="card-header fw-bolder">
@@ -34,26 +34,24 @@
 
             <div class="mb-1">
                 <label class="form-label"> ISNB </label>
-                <input type="Number" class="form-control" name="ISNB" placeholder="ISNB --Solo Numeros, Minimo 13--" value="{{ $consultaId->ISNB }}">>
+                <input type="Number" class="form-control" name="ISNB" value="{{ $consultaId->ISBN }}">
                 <p class="text-secondary fst-Italic"></p>
                 </div>
 
             <div class="mb-1">
              <label class="form-label"> Titulo</label>
-             <input type="text" class="form-control" name="txtTitulo" placeholder="Titulo" value="{{ $consultaId->Titulo }}">>
+             <input type="text" class="form-control" name="txtTitulo"  value="{{ $consultaId->Titulo }}">
              <p class="text-secondary fst-Italic"></p>
             </div>
 
             <div class="mb-4">
-                <label for="text" class="form-label" placeholder="Autor">Autor</label>
+                <label for="text" class="form-label">Autor</label>
                 <select class="form-select" name="txtAutor" aria-label="Default select example">
-                    <option selected>Selecciona un autor:</option>
-                    
                     @foreach ($categorias as $tb_autores)
                         <option value="{{$tb_autores['idAutor']}}">{{$tb_autores['Nombre']}}</option>
                     @endforeach
-
-                  </select>
+                
+                </select>
                 <p class="text-secondary fst-Italic">
                     {{$errors->first('txtAutor')}}
                 </p>
@@ -62,19 +60,19 @@
 
             <div class="mb-1">
              <label class="form-label"> Paginas</label>
-             <input type="Number" class="form-control" name="NumPaginas" placeholder="Numero de Paginas --Solo numeros--" value="{{ $consultaId->paginas }}">>
+             <input type="Number" class="form-control" name="NumPaginas"  value="{{ $consultaId->paginas }}">
              <p class="text-secondary fst-Italic"></p>
             </div>
 
             <div class="mb-1">
              <label class="form-label"> Editorial</label>
-             <input type="text" class="form-control" name="txtEditorial" placeholder="Editorial" value="{{ $consultaId->editorial }}">>
+             <input type="text" class="form-control" name="txtEditorial"  value="{{ $consultaId->editorial }}">
              <p class="text-secondary fst-Italic"></p>
             </div>
 
             <div class="mb-1">
              <label class="form-label"> Email Editorial </label>
-             <input type="Email" class="form-control" name="txtEmail" placeholder="Correo de la Editorial " value="{{ $consultaId->correo }}">>
+             <input type="Email" class="form-control" name="txtEmail"  value="{{ $consultaId->correo }}">
              <p class="text-secondary fst-Italic"></p>
             </div>
 
