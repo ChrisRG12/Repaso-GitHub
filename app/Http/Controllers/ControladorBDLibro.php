@@ -28,7 +28,8 @@ class ControladorBDLibro extends Controller
      */
     public function create()
     {
-        return view('Registro');
+        $categorias = tb_autores::all();
+        return view('Registro', compact('categorias'));
     }
 
     /**
@@ -52,7 +53,7 @@ class ControladorBDLibro extends Controller
         ]);
 
         $tit = $req->input('txtTitulo');
-        
+
         return redirect('Registro/create')->with('confirmacion', 'Libro Guardado') -> with('Vari', $tit);
     }
 
