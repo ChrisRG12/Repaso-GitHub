@@ -11,7 +11,7 @@
                     Registrar Libro
                  </div>
                  <div class="card-body ">
-                    <img src="\Imagenes\" class="card-img-top" alt="...">
+                    <a href="Autor/create" class="btn btn-outline-success"> Registrar Libro</a>
                  </div>
                 
             </div>
@@ -21,7 +21,7 @@
                     Registrar Autor
                  </div>
                  <div class="card-body ">
-                    <img src="\Imagenes\" class="card-img-top" alt="...">
+                    <a href="{{route('Libro.index')}}" class="btn btn-outline-success"> Registar Autor</a>
                 </div>
 
             </div>
@@ -31,7 +31,7 @@
                    Ver Libros
                  </div>
                  <div class="card-body ">
-                    <img src="\Imagenes\" class="card-img-top" alt="...">
+                    <a href="{{route('Libro.index')}}" class="btn btn-outline-primary">Ver Libros</a>
                 </div>
 
             </div>
@@ -41,7 +41,7 @@
                     Ver Autores
                  </div>
                  <div class="card-body ">
-                    <img src="\Imagenes\" class="card-img-top" alt="...">
+                    <a href="{{route('Autor.index')}}" class="btn btn-outline-primary"> Ver autores</a>
                 </div>
 
             </div>
