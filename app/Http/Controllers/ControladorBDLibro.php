@@ -82,7 +82,7 @@ class ControladorBDLibro extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(validar_Libro $request, $id)
     {
         DB::table('tb_libros')->where('idLibro', $id)->update([
 
